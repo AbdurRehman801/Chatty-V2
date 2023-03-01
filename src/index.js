@@ -1,10 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { initializeApp } from "firebase/app";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const firebaseConfig = {
+  apiKey: "AIzaSyC3fRJYLVPZWQBF9AAdnnbJ7wbFT7PyNf0",
+  authDomain: "instant-chatty.firebaseapp.com",
+  databaseURL: "https://instant-chatty-default-rtdb.firebaseio.com",
+  projectId: "instant-chatty",
+  storageBucket: "instant-chatty.appspot.com",
+  messagingSenderId: "792506044070",
+  appId: "1:792506044070:web:b72731c403f59f3976ae67",
+};
+
+const app = initializeApp(firebaseConfig);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
